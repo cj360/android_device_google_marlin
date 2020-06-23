@@ -669,3 +669,15 @@ PRODUCT_PACKAGES_DEBUG += a_sns_test
 # Write flags to the vendor space in /misc partition.
 PRODUCT_PACKAGES += \
     misc_writer
+
+# Google Apps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+REMOVE_GAPPS_PACKAGES += \
+    Chrome \
+    GoogleContacts \
+    GoogleDialer \
+    LatinIMEGooglePrebuilt \
+    PixelLiveWallpaperPrebuilt \
+    SoundPickerPrebuilt \
+    WellbeingPrebuilt
+
